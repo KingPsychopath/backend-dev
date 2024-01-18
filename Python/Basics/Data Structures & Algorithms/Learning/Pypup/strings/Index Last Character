@@ -1,0 +1,10 @@
+# Return Type = str
+# Type of "s" = str
+def last_character(s):
+    return s[-1]
+
+# How it would typically be done in otehr languages
+
+def first_character(s):
+   last_char = s[len(s) - 1]
+   return last_char

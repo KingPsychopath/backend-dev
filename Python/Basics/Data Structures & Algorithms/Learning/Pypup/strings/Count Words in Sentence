@@ -1,0 +1,46 @@
+# Define a function that takes two string arguments: s and w
+def count_word_occurrences(s, w):
+    # Convert both strings to lowercase to make the search case-insensitive
+    s = s.lower()
+    w = w.lower()
+
+    # Initialize a counter variable and a starting position variable
+    count = start = 0
+
+    # Loop through the string s until the starting position is at the end of the string
+    while start < len(s):
+        # Find the position of the word w in the string s, starting from the current starting position
+        pos = s.find(w, start)
+
+        # If the word w is found, increment the counter and update the starting position to the next character after the found word
+        if pos != -1:
+            count += 1
+            start = pos + 1
+        # If the word w is not found, break out of the loop
+        else:
+            break
+
+    # Return the final count of word occurrences
+    return count
+
+print(count_word_occurrences("To BE or not to be", "BE"))  # Output: 2
+print(count_word_occurrences("I am THE knight", "the"))  # Output: 1
+
+# Define a function that takes two string arguments: s and w
+def count_word(s, w):
+    # Initialize a counter variable
+    count = 0
+
+    # Convert both strings to lowercase to make the search case-insensitive
+    s = s.lower()
+    w = w.lower()
+
+    # Loop through the string s using a sliding window approach
+    for i in range(len(s) - len(w) + 1):
+        # Check if the current substring of s matches the word w
+        if s[i:i+len(w)] == w:
+            # If the word w is found, increment the counter
+            count += 1
+
+    # Return the final count of word occurrences
+    return count

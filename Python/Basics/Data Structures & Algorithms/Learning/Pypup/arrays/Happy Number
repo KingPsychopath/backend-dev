@@ -1,0 +1,10 @@
+def is_happy(n):
+   seen = set()
+   # Stopping case is if we've seen the number before or if we've reached 1
+   while n != 1 and n not in seen:
+       seen.add(n)
+    #    Stringify the number to make it iterable and convert back to integer with expression
+       digits = [int(digit) for digit in str(n)]
+       n = sum(digit**2 for digit in digits)
+   # Boolean returns True if n is 1, False otherwise
+   return n == 1
