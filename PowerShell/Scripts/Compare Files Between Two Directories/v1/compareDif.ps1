@@ -1,7 +1,5 @@
 Param(
-  [Parameter(Position=0)]
   [string]$a,
-  [Parameter(Position=1)]
   [string]$b
 )
 

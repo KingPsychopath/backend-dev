@@ -5,7 +5,7 @@ A simple PowerShell script to compare files between two directories; with a prog
 ## Usage
 
 ```powershell
-.\compareDif.ps1 "C:\Path1" "C:\Path2"
+.\compareDif.ps1 -a "C:\Path1" -b "C:\Path2"
 ```
 
 # Output
@@ -19,9 +19,9 @@ bxks_600981521301086            <=
 
 The InputObject and SideIndicator are properties in the output of the Compare-Object cmdlet in PowerShell.
 
-**InputObject**: This represents the actual objects that are being compared. In your script, these would be the files and directories in the paths you specified.
+InputObject: This represents the actual objects that are being compared. In your script, these would be the files and directories in the paths you specified.
 
-**SideIndicator**: This shows where the difference lies. It can have one of three values:
+SideIndicator: This shows where the difference lies. It can have one of three values:
 
 **==:** The object appears in both the reference and difference lists (i.e., it's the same in both directories).
 **<=:** The object appears only in the reference list (i.e., it's only in the first directory).
@@ -36,8 +36,6 @@ The script will compare the files in the two directories and output the differen
 In this script, we first count the total number of files in each directory. Then, while we're getting the list of files in each directory, we update a progress bar using Write-Progress. The -PercentComplete parameter is calculated as the current file number divided by the total number of files, multiplied by 100 to get a percentage.
 
 We then compare the files in the two directories using Compare-Object. The -PassThru parameter is used to output the differences in the console.
-
-The Position attribute is used to specify the position of the parameters when calling the script. The first parameter ($a) has a position of 0, and the second parameter ($b) has a position of 1.
 
 Please note that this script will show progress for scanning directories, not for the comparison process. As mentioned earlier, Compare-Object doesn't provide progress information, so we can't add a progress bar to it directly.
 
