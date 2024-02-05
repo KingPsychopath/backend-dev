@@ -1,0 +1,1 @@
+INSERT INTO my_table(name, age) VALUES('Abel', 30);

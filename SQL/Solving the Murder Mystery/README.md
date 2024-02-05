@@ -1,4 +1,8 @@
 
+# SQL Murder Mystery
+
+This was my intuition in solving the murder mystery detailed here: https://github.com/NUKnightLab/sql-mysteries
+
 # Find the Crime by Sorting By Murder in the City
 
 ```sql
