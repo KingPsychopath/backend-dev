@@ -2,6 +2,8 @@
 
 A simple PowerShell script to compare files between two directories; with a progress bar to show the comparison progress created by me, KingPsychopath.
 
+![Terminal Window showcasing Program Running](image.png)
+
 ## Usage
 
 ```powershell
@@ -24,7 +26,9 @@ The InputObject and SideIndicator are properties in the output of the Compare-Ob
 **SideIndicator**: This shows where the difference lies. It can have one of three values:
 
 **==:** The object appears in both the reference and difference lists (i.e., it's the same in both directories).
+
 **<=:** The object appears only in the reference list (i.e., it's only in the first directory).
+
 **=>:** The object appears only in the difference list (i.e., it's only in the second directory).
 
 # Intuition
