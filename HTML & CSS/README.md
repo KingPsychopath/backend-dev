@@ -69,16 +69,77 @@ comment */
 ```
 
 ## Selectors
-**Type Selectors** - Selects all elements of a specific type. For example, the following rule would apply to all `<p>` elements in the document: (Use the element name to select a type in css)
-
 **Universal Selectors** - Selects all elements in the document. For example, the following rule would apply to all elements in the document: (Use * to select all elements in css)
 
+**Type Selectors** - Selects all elements of a specific type. For example, the following rule would apply to all `<p>` elements in the document: (Use the element name to select a type in css)
+```css
+p {
+  text-align: center;
+  color: red;
+}
+```
+
 **Class Selectors** - Selects all elements with a specific class attribute. For example, the following rule would apply to all elements with class="center": (Use . to select a class in css)
+```css
+.center {
+  text-align: center;
+  color: red;
+}
+```
 
 **ID Selectors** - Selects a single element with a specific id attribute. For example, the following rule would apply to the single element with id="intro": (Use # to select an id in css)
+```css
+#intro {
+  text-align: center;
+  color: red;
+}
+```
 
 **Attribute Selectors** - Selects all elements with a specific attribute. For example, the following rule would apply to all elements with a title attribute (Use [] to select an attribute in css):
+```css
+a[title] {
+  background-color: yellow;
+}
+```
 
+**Action Selectors** - Selects all elements that are in a specific state. For example, the following rule would apply to all elements that are being hovered over: (Use : to select an action in css)
+```css
+a:hover {
+  background-color: yellow;
+}
+```
+
+## Child Selectors
+**Child/Descendant Selectors** - Selects all elements that are the children of a specified element. For example, the following rule would apply to all `<p>` elements that are children of a `<div>` element: (Use > to select a child in css)
+```css
+div > p {
+  text-align: center;
+  color: red;
+}
+```
+
+While you can select all children of div with:
+```css
+div * {
+  text-align: center;
+  color: red;
+}
+```
+
+**First Child Selectors** - Selects the first child element of a specified element. For example, the following rule would apply to the first child element of a `<div>` element: (Use :first-child to select the first child in css)
+```css
+div p:first-child {
+  text-align: center;
+  color: red;
+}
+```
+Following the n-th child:
+```css
+div p:nth-child(2) {
+  text-align: center;
+  color: red;
+}
+```
 ## Colors
 Colors are specified using predefined color names, RGB, HEX, HSL, RGBA, HSLA values.
 
@@ -94,3 +155,66 @@ value; 0% means a shade of gray and 100% is the full color. Lightness is also a 
 **RGBA** - RGBA values are specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
 **HSLA** - HSLA values are specified with: hsla(hue, saturation, lightness, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
+# JavaScript
+
+See JS folder for more details, on javascript itself.
+## Syntax
+
+JavaScript is written in plain text, just like HTML and CSS, so you do not need any new tools to write a script. You can simply use any text editor (like Notepad) and save your file with a .html extension. HTML and JavaScript can be used in the same document.
+
+JavaScript statements are composed of:
+- Values, Operators, Expressions, Keywords, and Comments.
+- Statements are separated by a semicolon.
+
+To use JavaScript in an HTML document, you must include the external JavaScript file inside the HTML file. You can do this by using the `<script>` tag.
+
+## Code within the head/body tag
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>A Web Page</h1>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+  </body>
+</html>
+```
+
+# Code imported from an external file
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="myScript.js"></script>
+  </head>
+  <body>
+    <h1>A Web Page</h1>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+  </body>
+</html>
+```
+
+The external file (myScript.js) looks like this:
+```javascript
+    <!-- The external file (myScript.js) -->
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+```
+    
+
+## Comments
+Comments can be used to explain JavaScript code, and to make it more readable. JavaScript comments can be used to explain JavaScript code, and to make it more readable. Comments can also be used to prevent execution, when testing alternative code.
+
+**Single Line Comments** - Single line comments start with `//`. Any text between `//` and the end of the line will be ignored by JavaScript (will not be executed).
+
+**Multi-line Comments** - Multi-line comments start with `/*` and end with `*/`. Any text between `/*` and `*/` will be ignored by JavaScript.

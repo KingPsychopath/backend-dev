@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function greet() {
+            const name = document.querySelector('#name').value; // get the value of the input field with id 'name'
+            alert(`Hello, ${name}`);
+        }
+    </script>
+    <title>Home</title>
+</head>
+<body>
+    <form onsubmit="greet(); return false;">
+        <input autocomplete="off" autofocus id="name" type="text" placeholder="What is your name?">
+        <input type="submit">
+    </form>
+</body>
+</html>
