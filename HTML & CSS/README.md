@@ -38,6 +38,7 @@ They are unordered and case-insensitive. The attribute name and attribute value 
   </body>
 ```
 Here, the `<html>` element contains two other elements: `<head> `and `<body>`. The `<head>` element contains a `<title>` element, and the `<body>` element contains two other elements: `<h1>` and `<p>`.
+
 Head and body are both children of the html element, and the title is a child of the head element. The h1 and p elements are children of the body element. The body is their parent.
 Doctype is not an element, but a declaration. It is not a child of the html element, but a sibling (they are both children of the same parent).
 
@@ -69,17 +70,27 @@ comment */
 
 ## Selectors
 **Type Selectors** - Selects all elements of a specific type. For example, the following rule would apply to all `<p>` elements in the document: (Use the element name to select a type in css)
+
 **Universal Selectors** - Selects all elements in the document. For example, the following rule would apply to all elements in the document: (Use * to select all elements in css)
+
 **Class Selectors** - Selects all elements with a specific class attribute. For example, the following rule would apply to all elements with class="center": (Use . to select a class in css)
+
 **ID Selectors** - Selects a single element with a specific id attribute. For example, the following rule would apply to the single element with id="intro": (Use # to select an id in css)
+
 **Attribute Selectors** - Selects all elements with a specific attribute. For example, the following rule would apply to all elements with a title attribute (Use [] to select an attribute in css):
 
 ## Colors
 Colors are specified using predefined color names, RGB, HEX, HSL, RGBA, HSLA values.
 
 **Color Names** - There are 140 color names supported by all browsers. For example, "red", "green", "blue", etc.
+
 **RGB** - RGB values are specified with: rgb(red, green, blue). Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255.
+
 **HEX** - HEX values are specified with: #RRGGBB. The value of each color is represented by a 2-digit number. The values are 00 (lowest) to FF (highest).
-**HSL** - HSL stands for Hue, Saturation, and Lightness. HSL values are specified with: hsl(hue, saturation, lightness). Hue is a degree on the color wheel (from 0 to 360). Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.
+
+**HSL** - HSL stands for Hue, Saturation, and Lightness. HSL values are specified with: hsl(hue, saturation, lightness). Hue is a degree on the color wheel (from 0 to 360). Saturation is a percentage 
+value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.
+
 **RGBA** - RGBA values are specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
 **HSLA** - HSLA values are specified with: hsla(hue, saturation, lightness, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
