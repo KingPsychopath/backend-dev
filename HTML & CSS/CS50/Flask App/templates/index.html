@@ -6,6 +6,10 @@
 </head>
 
 <body>
-    Hello, {{ name }} 
+    <form method="get" action="/greet">
+        <input autocomplete="off" autofocus name="name" type="text" placeholder="What is your name?" required>
+        <input type="submit">
+    </form>
+    
 </body>
 </html>
