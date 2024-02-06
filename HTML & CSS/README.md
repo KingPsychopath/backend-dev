@@ -35,7 +35,7 @@ They are unordered and case-insensitive. The attribute name and attribute value 
     <p>This is a paragraph.</p>
   </body>
 ```
-Here, the <html> element contains two other elements: <head> and <body>. The <head> element contains a <title> element, and the <body> element contains two other elements: <h1> and <p>.
+Here, the `<html>` element contains two other elements: `<head> `and `<body>`. The `<head>` element contains a `<title>` element, and the `<body>` element contains two other elements: `<h1>` and `<p>`.
 Head and body are both children of the html element, and the title is a child of the head element. The h1 and p elements are children of the body element. The body is their parent.
 Doctype is not an element, but a declaration. It is not a child of the html element, but a sibling (they are both children of the same parent).
 
