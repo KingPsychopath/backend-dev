@@ -1,3 +1,10 @@
+###############################################################################
+# Compare-Dif.ps1
+# Copyright (c) 2024 - KingPsychopath
+#
+# Do whatever you want with this module. It's free to use and modify.
+###############################################################################
+
 Param(
   [Parameter(Position=0)]
   [string]$a,

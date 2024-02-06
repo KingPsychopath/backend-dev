@@ -1,6 +1,6 @@
 # Compare Files Between Two Directories
 
-A simple PowerShell script to compare files between two directories; with a progress bar to show the comparison progress created by me, KingPsychopath.
+A simple PowerShell script to compare files between two directories; with a progress bar to show the comparison progress; feel free to use it; I found it useful for comparing files between my Instagram and Facebook data exports.
 
 ![Terminal Window showcasing Program Running](image.png)
 
