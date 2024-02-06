@@ -4,6 +4,7 @@ This directory contains all of my study materials for the Python programming as 
 
 ## Contents
 
+- **Projects**: This folder contains Python projects created by myself during self-learning
 - **Practice**: This folder contains Python scripts demonstrating various concepts and techniques for practice
 - **Notes**: This folder contains notes on Python programming.
 
