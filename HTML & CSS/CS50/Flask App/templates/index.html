@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Flask App</title>
-</head>
+{% extends "layout.html" %}
 
-<body>
-    <form method="get" action="/greet">
+{% block title %}
+    Flask - Name App
+{% endblock %}
+
+{% block body %}
+    <form method="post" action="/greet">
         <input autocomplete="off" autofocus name="name" type="text" placeholder="What is your name?" required>
         <input type="submit">
-    </form>
-    
-</body>
-</html>
+    </form >
+{% endblock %}
+
+{% block footer %}
+    <p>Test, change!</p>
+{% endblock %}
+
+{"mode":"full","isactive":false}
