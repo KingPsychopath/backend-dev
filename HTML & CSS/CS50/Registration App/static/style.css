@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: gold;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    text-align: left;
+}
+
+
+#title {
+    font-size: 50px;
+    color: black;
+}
+
+.large {
+    font-size: large;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.small {
+    font-size: small;
+}
+
+#form {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+#form input {
+    margin: 10px;
+}
+
+#form label {
+    margin: 10px;
+}
+
+#form button {
+    margin: 10px;
+}
+
+#form select {
+    margin: 10px;
+}
+
+#form textarea {
+    margin: 10px;
+}
+
+#form div {
+    margin: 10px;
+}
+
+#form h1 {
+    margin: 10px;
+}
+
