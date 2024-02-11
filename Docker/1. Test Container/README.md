@@ -1,6 +1,5 @@
-Building a Test Container for Practice, Testing, and Learning
+# Running a Pre-Built Sample Container
 
-RUNNING A PRE-BUILT SAMPLE CONTAINER
 Docker hosts a "getting started" image for users to play with. Run our fork of Docker's getting started image (our fork adds CORS headers so our tests can connect)
 
 Run this command on your CLI:
@@ -53,4 +52,14 @@ This `curl` command makes a request to `http://localhost:80` and prints the HTTP
 - `-w "%{http_code}"`: This uses `curl`'s `-w` or `--write-out` option to output information on stdout after a completed operation. The `"%{http_code}"` part is a variable that gets replaced with the HTTP status code of the response.
 
 So, this command makes a request to `http://localhost:80`, discards the response body, and prints the HTTP status code. It's a way to check if a web server is responding and what status code it's returning, without displaying the response body.
+
+# Running the Tests
+
+Run the following commands in your CLI in this directory after cloning the repository and running the container:
+
+```bash
+./http_testBasic.sh
+./http_testAdvanced.sh
+```
+
 
