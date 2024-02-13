@@ -217,7 +217,7 @@ Connection: close
 
 (.venv) (main) dev@THEHENNYMACHINE ~/workspace/boot.dev/Python/API $ curl -I -X 'POST' http://127.0.0.1:5000/bookings/create?name=Dave&style=LowCut
 ```
-![alt text](image.png)
+![Screenshot of JSON Request Return of Booking Page](image.png)
 
 ```shell
 (.venv) (main) dev@THEHENNYMACHINE ~/workspace/boot.dev/Python/API $ curl -I -X 'DELETE' http://127.0.0.1:5000/bookings/del/3
@@ -228,7 +228,55 @@ Content-Type: application/json
 Content-Length: 134
 Connection: close
 ```
-![alt text](image-1.png)
+![Screenshot of JSON Request Return of Booking Page after Deleting an ID](image-1.png)
+
+# API Versioning
+
+Flask Blueprints make an application modular, which in simple terms, means you can group things together. For example, if you want to separate the logic for a web application and RESTful APIs, you can use blueprints. In my experience, I've used blueprints building subdomains. You do not want to wrrite a monolithic code since it will be harder to maintain as it grow bigger.
+
+
+To version your API in a Flask application, you can include the version number in the URL of your routes. Here's an example:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/v1/users')
+def get_users_v1():
+    # Code for version 1 of the API
+
+@app.route('/v2/users')
+def get_users_v2():
+    # Code for version 2 of the API
+```
+
+In this example, the `get_users_v1` function handles requests to `/v1/users`, and the `get_users_v2` function handles requests to `/v2/users`. This allows you to have different code for different versions of your API.
+
+Another approach is to use Flask's blueprints to organize your code. You can create a separate blueprint for each version of your API, and then register all of the blueprints with your Flask app. Here's an example:
+
+```python
+from flask import Flask, Blueprint
+
+app = Flask(__name__)
+
+v1_blueprint = Blueprint('v1', __name__, url_prefix='/v1')
+v2_blueprint = Blueprint('v2', __name__, url_prefix='/v2')
+
+@v1_blueprint.route('/users')
+def get_users_v1():
+    # Code for version 1 of the API
+
+@v2_blueprint.route('/users')
+def get_users_v2():
+    # Code for version 2 of the API
+
+app.register_blueprint(v1_blueprint)
+app.register_blueprint(v2_blueprint)
+```
+
+In this example, the `get_users_v1` function handles requests to `/v1/users`, and the `get_users_v2` function handles requests to `/v2/users`, just like in the previous example. However, by using blueprints, you can keep the code for each version of your API in a separate file, which can make your code easier to manage as your API grows.
+
 
 # Commentary
 
@@ -238,5 +286,7 @@ Connection: close
 - Browser URL field, can only send GET Requests, however you can send POST requests also from forms.
 - 
 
+# References
 
+Good learning resources are boot.dev and ![this link](https://www.youtube.com/watch?v=qbLc5a9jdXo)
 

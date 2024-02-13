@@ -33,11 +33,15 @@ class Booking(db.Model):
             'style': self.style
         }   
 
+
+# I am going to create two different versions of the API, /v1/ - uses the path arguments and /v2/ - uses the query parameters
+
 @app.route('/') # Defined route for the API HTTP request
 def index(): # Function to be executed when the route is called
     return 'Hello, World! Welcome to the Booking API!'
 
-@app.route('/bookings') # Defined route for the API HTTP request
+# In Flask you can make both 127.0.0.1:5000/bookings and 127.0.0.1:5000/bookings/ return the same result by adding a trailing slash to the route
+@app.route('/bookings/') # Defined route for the API HTTP request
 def get_all_bookings():
     bookings = Booking.query.all()
     output = [booking.to_dict() for booking in bookings]
@@ -59,7 +63,7 @@ def get_all_bookings():
     
     # }
     
-@app.route('/bookings/<int:id>') # Defined route for the API HTTP request
+@app.route('/bookings/<int:id>/') # Defined route for the API HTTP request
 def get_single_booking(id):
     booking = Booking.query.get_or_404(id)
     
@@ -73,7 +77,7 @@ def get_single_booking(id):
         'style': booking.style
     }), 200 # Return a status code of 200
     
-@app.route('/bookings/create', methods=['POST'])
+@app.route('/bookings/create/', methods=['GET', 'POST'])
 def create_booking():
     try: # Might already exist
         name = request.args.get("name")
@@ -83,15 +87,23 @@ def create_booking():
             
         if not style:
             style = "Waves"
-            
+        try:
+            booking = Booking.query.filter_by(name=name).first() # Check if the booking already exists  # style is not checked because it is not unique in the database schema
+            if booking:
+                return jsonify({'message': 'Booking already exists'}), 400
+        except Exception as e:
+            raise ValueError(f"Error: {str(e)}")
+        
         db.session.add(Booking(name=name, style=style))
         db.session.commit()
         return jsonify({'name': name, 'style': style})   
     except Exception as e:
         raise ValueError(f"Error: {str(e)}")
 
-@app.route('/bookings/del/<int:id>', methods=['DELETE']) # Defined route for the API HTTP request
+@app.route('/bookings/del/<int:id>/', methods=['GET', 'DELETE']) # Defined route for the API HTTP request
 def delete_booking(id):
+    if request.method == 'GET':
+        return jsonify({'message': 'Send a DELETE request to delete a booking'}), 200
     try:
         booking = Booking.query.get(id)
         data = booking.to_dict()
@@ -110,7 +122,7 @@ def api():
 
 # Error handling
 
-@app.errorhandler(404)
+@app.errorhandler(404) # Not Found - function to handle the error when 404 is returned
 def not_found(error):
     # Simple Error for Client is preferred to not expose the server error to the client
     #return jsonify({'error': 'Resource not found'}), 404
@@ -118,13 +130,13 @@ def not_found(error):
 
 
 
-@app.errorhandler(500)
+@app.errorhandler(500) # Internal Server Error - function to handle the error when 500 is returned
 def server_error(error):
     #return jsonify({'error': 'Server error'}), 500
     return jsonify({"error": f"Server error : \n More Details( {str(error)} )" }), 500
 
 
-@app.errorhandler(ValueError)
+@app.errorhandler(ValueError) # Custom Error - function to handle the error when a ValueError is returned
 def handle_value_error(error):
     return jsonify({'error': str(error)}), 400
 
