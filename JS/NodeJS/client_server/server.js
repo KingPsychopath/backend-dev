@@ -1,9 +1,21 @@
 const http = require("http");
 const fs = require("fs");
+const _ = require("lodash");
 
 // Could store the instance of the server as a variable (useful for websockets)
 // createServer first argument, takes in a function that runs everytime a request is sent to the server.
 const server = http.createServer((request, response) => {
+  // lodash - playing around with third-party dependencies
+  const num = _.random(0, 20);
+  console.log(num);
+
+  const greet = _.once(() => {
+    console.log("hello");
+  });
+
+  greet();
+  greet();
+
   //console.log(request) // Returns - JSON Object of Request
   //console.log(`Request Made: ${request}`); // Returns - Stringified Object model i.e. Request Made: [object Object]
   console.log(`Request Made: ${request.url}, ${request.method}`); // Request Made: /, GET
