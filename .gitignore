@@ -21,7 +21,6 @@
 # Python cache files
 __pycache__/
 
-
 # macOS system files
 .DS_Store
 
@@ -30,10 +29,12 @@ __pycache__/
 venv/
 ENV/
 
+# Dependency directories
+node_modules/
+
 # Flask stuff:
 instance/
 .webassets-cache
-
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

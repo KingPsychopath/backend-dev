@@ -11,7 +11,6 @@ const app = express();
 // Start Listening at Port 3000
 app.listen(3000);
 
-
 // Listening for Requests
 // if we send a response to the browser, then we do not carry on with anymore of the code.
 
