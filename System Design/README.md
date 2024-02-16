@@ -22,3 +22,9 @@ This is a collection of notes on System Design. It is a collection of notes from
 - [WebSockets](Notes/WebSockets.md)
 - [API Paradigms](Notes/API%20Paradigms.md)
 - [API Design](Notes/API%20Design.md)
+
+# Extra Notes
+
+- [What is a RESTful API?](Notes/RESTful%20APIs.md)
+- [What are Ports](Notes/What%20are%20Ports.md)
+- [Load Balancing](Notes/Load%20Balancers.md)

@@ -27,7 +27,7 @@ However computers have limitations in terms of upgrading, and we will hit the co
 
 ## Load Balancers
 
-The problem we introduce when we have multiple servers is how do we know which server the request should go to, we use [[Load Balancers]] to handle this, so that the request can be forwarded to the server with the minimal amount of traffic; and each server will have a balanced amount of traffic.
+The problem we introduce when we have multiple servers is how do we know which server the request should go to, we use [Load Balancers](Notes/../Load%20Balancers.md) to handle this, so that the request can be forwarded to the server with the minimal amount of traffic; and each server will have a balanced amount of traffic.
 
 ## Third-party Servers
 
