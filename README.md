@@ -1,29 +1,37 @@
 # Boot.dev Home Study Repository
 
-This repository is dedicated to my back-end development studies with Boot.dev. 
+This repository is dedicated to my back-end and DevOps development studies.
 It serves as a personal knowledge base and reference for various topics I've explored.
 
 ## Topics Covered
 
 - Python
-- Shells and Terminals (Linux + Powershell)
-- Object-Oriented Programming (OOP)
-- Git
-- Functional Programming
-- Algorithms
-- Data Structures
-- JavaScript
-- HTTP
 - Go
+- Git
+- Shells and Terminals (Linux + Powershell)
+- JavaScript
+-
+- Object-Oriented Programming (OOP)
+- System Design and Architecture
+- Functional Programming
+
+- Algorithms
+- Advanced Algorithms
+- Data Structures
+
+- HTTP
 - Webservers
+- Networking
+- SQL (Databases)
+
+- AWS
 - Docker
 - Continuous Integration/Continuous Deployment (CI/CD)
 - Kubernetes
-- Cryptography
-- Advanced Algorithms
-
-- AWS
 - Terraform
+
+- Cryptography
+- Security
 
 ## Structure
 
