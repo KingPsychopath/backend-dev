@@ -1,8 +1,0 @@
-# Type of "n" = int
-def stars_v(n):
-    for i in range(1, n + 1):
-        print('*' * i)
-
-stars_v(5)
-# Start range from 1 because we want to print 1 star on the first line
-# End range at n+1 because range is exclusive and we want to include n in the number of stars printed

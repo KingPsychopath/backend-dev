@@ -1,7 +1,0 @@
-# Return Type = int
-# Type of "a" = int
-
-def last_digit(i=1234):
-    print(i % 10)
-
-last_digit()

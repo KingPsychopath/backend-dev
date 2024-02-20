@@ -13,7 +13,7 @@ It serves as a personal knowledge base and reference for various topics I've exp
 - Shells and Terminals (Linux + Powershell)
 - JavaScript
 
-### Concepts
+### Concepts and Paradigms
 
 - Object-Oriented Programming (OOP)
 - System Design and Architecture
