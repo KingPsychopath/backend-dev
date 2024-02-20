@@ -16,7 +16,7 @@ It serves as a personal knowledge base and reference for various topics I've exp
 ### Concepts and Paradigms
 
 - Object-Oriented Programming (OOP)
-- System Design and Architecture
+- System Design and Architecture (Microservices, Monoliths, Event-Driven Architecture vs Request-Driven Architecture, Choreography vs Orchestration)
 - Functional Programming
 
 ### Algorithms and Data Structures
@@ -27,10 +27,16 @@ It serves as a personal knowledge base and reference for various topics I've exp
 
 ### Connecting the Web and Persistence
 
-- HTTP
-- Webservers
+- HTTP (Webservers and APIs)
 - Networking
+
+### Storage and Data Query
+
 - SQL (Databases)
+- NoSQL (Databases)
+- Caching (Redis)
+- Search Engines (Elasticsearch and OpenSearch)
+- Streaming Data, Message Brokers & Queues (Kafka)
 
 ### DevOps
 
