@@ -1,4 +1,4 @@
-package OOP;
+package practice.OOP;
 
 public interface Readable {
 

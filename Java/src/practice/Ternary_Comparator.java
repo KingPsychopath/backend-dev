@@ -1,4 +1,4 @@
-
+package practice;
 
 public class Ternary_Comparator {
     public static void main(String[] args) {

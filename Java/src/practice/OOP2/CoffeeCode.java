@@ -1,14 +1,14 @@
-package OOP2;
+package practice.OOP2;
 
-public class CoffeeCode {
+class CoffeeCode {
     // Step 1: Define the component interface
-public interface Coffee {
+interface Coffee {
     String getDescription();
     double getCost();
 }
 
 // Step 2: Implement concrete components
-public class SimpleCoffee implements Coffee {
+class SimpleCoffee implements Coffee {
     @Override
     public String getDescription() {
         return "Simple Coffee";
@@ -20,8 +20,10 @@ public class SimpleCoffee implements Coffee {
     }
 }
 
+
+
 // Step 3: Implement the decorator
-public abstract class CoffeeDecorator implements Coffee {
+abstract class CoffeeDecorator implements Coffee {
     protected final Coffee decoratedCoffee;
 
     public CoffeeDecorator(Coffee c) {
@@ -78,6 +80,10 @@ public class Main {
         Coffee c = new SimpleCoffee();
         c = new WithMilk(c);
         c = new WithSugar(c);
+
+        Coffee simpleCoffee = new SimpleCoffee();
+        Coffee coffeeWithMilk = new WithMilk(simpleCoffee);
+        Coffee coffeeWithSugar = new WithSugar(simpleCoffee);
 
         System.out.println(c.getDescription() + " : " + c.getCost());
     }

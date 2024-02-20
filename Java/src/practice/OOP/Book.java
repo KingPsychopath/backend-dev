@@ -1,4 +1,4 @@
-package OOP;
+package practice.OOP;
 
 public class Book implements Readable {
     // fields, constructors, and methods
@@ -56,7 +56,8 @@ public class Book implements Readable {
 
     @Override
     public String toString() {
-        return "Book{" + "title=" + getTitle() + ", author=" + getAuthor() + ", pages=" + getPages() + ", language=" + getLanguage() + '}';
+        return "Book{" + "title=" + getTitle() + ", author=" + getAuthor() + ", pages=" + getPages() + ", language="
+                + getLanguage() + '}';
     }
 
     @Override

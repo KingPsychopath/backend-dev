@@ -1,6 +1,6 @@
-package OOP;
+package practice.OOP;
 
-public class Manga extends Book{
+public class Manga extends Book {
 
     private String genre;
 
@@ -9,19 +9,17 @@ public class Manga extends Book{
         this.genre = genre;
     }
 
-    @Override
     public String getGenre() {
         return genre;
     }
 
-    @Override
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
-    @Override
     public String toString() {
-        return "Manga{" + "title=" + getTitle() + ", author=" + getAuthor() + ", pages=" + getPages() + ", language=" + getLanguage() + ", genre=" + genre + '}';
+        return "Manga{" + "title=" + getTitle() + ", author=" + getAuthor() + ", pages=" + getPages() + ", language="
+                + getLanguage() + ", genre=" + genre + '}';
     }
-    
+
 }

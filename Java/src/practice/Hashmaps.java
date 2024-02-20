@@ -1,3 +1,5 @@
+package practice;
+
 import java.util.HashMap;
 
 public class Hashmaps { // Equivalent to Python's Dictionary

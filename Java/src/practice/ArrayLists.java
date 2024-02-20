@@ -1,3 +1,5 @@
+package practice;
+
 import java.util.ArrayList;
 
 class ArrayLists {
@@ -25,11 +27,11 @@ class ArrayLists {
 
         // Access: you get the value of a specific index
         System.out.println("\n Accessing the array");
-        System.out.println(String.format("Index 0: %d", list.get(0)));
+        System.out.printf("Index 0: %d%n", list.get(0));
 
         // Length: you can specify the length of the array
         System.out.println("\n Length of the array");
-        System.out.println(String.format("Length: %d", list.size()));
+        System.out.printf("Length: %d%n", list.size());
 
         // Iteration
         System.out.println("\n Iterating through the array");
@@ -50,7 +52,7 @@ class ArrayLists {
         // Copying
         System.out.println("Copying the array");
         ArrayList<Integer> listCopy = new ArrayList<>(list);
-        System.out.println("Copied Array: " + listCopy.toString());
+        System.out.println("Copied Array: " + listCopy);
 
         // Sorting
         System.out.println("\n Sorting the array");
@@ -63,7 +65,7 @@ class ArrayLists {
         // Searching
         System.out.println("\n Searching the array");
         int index = list.indexOf(3);
-        System.out.println(String.format("Index of 3: %d", index));
+        System.out.printf("Index of 3: %d%n", index);
 
         // Clearing
         System.out.println("\n Clearing the array");

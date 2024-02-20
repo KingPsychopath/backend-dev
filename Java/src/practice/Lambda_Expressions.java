@@ -1,3 +1,5 @@
+package practice;
+
 public class Lambda_Expressions {
     public static void main(String[] args) {
         // Lambda Expressions

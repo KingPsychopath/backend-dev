@@ -1,3 +1,5 @@
+package practice;
+
 public class Strings {
     public static void main(String[] args) {
         // Declaration: you can specify the type of the array (String str;)
@@ -14,6 +16,7 @@ public class Strings {
 
         // Length: you can specify the length of the array (str.length();)
         System.out.println(String.format("Length: %d", str.length()));
+        System.out.printf("Length: %d%n", str.length());
 
         // Concatenation: you can specify the value of the array (str.concat(" World");)
         System.out.println(str.concat(" World"));

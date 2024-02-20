@@ -1,3 +1,5 @@
+package practice;
+
 class Arrays {
     public static void main(String[] args) {
         // Declaration: you can specify the type of the array (int[] arr;)
@@ -16,13 +18,15 @@ class Arrays {
         System.out.println("\n Accessing the array");
         System.out.println("Index 3: " + arr[3]);
 
-        
+
+
+
         // Print: you can output the value of the array to String
-        System.out.println("\n Printing the array");   
+        System.out.println("\n Printing the array");
         String[] array = new String[] {"John", "Mary", "Bob"};
         System.out.println(java.util.Arrays.toString(array));
         System.out.println(java.util.Arrays.toString(arr));
-        
+
         // Length: you can specify the length of the array (arr.length;)
         System.out.println("\n Length of the array");
         System.out.println(String.format("Length: %d", arr.length));
@@ -77,9 +81,9 @@ class Arrays {
         arr2D[1][2] = 6;
 
         int[][] arr2D2 = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
         };
 
         // Printing 2D Array
@@ -89,6 +93,6 @@ class Arrays {
             }
             System.out.println();
         }
-        
+
     }
 }

@@ -1,8 +1,9 @@
+import java.util.Map;
 import java.util.Scanner;
 import java.util.HashMap;
 
 // Print the position of the letter in the alphabet
-public class Assignment1 {
+class Assignment1 {
 	public static void main (String[] args)
 	{
 		Map<Character, Integer> alphabet = new HashMap<>();
@@ -19,6 +20,7 @@ public class Assignment1 {
 		alphabet.put("f", 6);
 		alphabet.put("g", 7);
 		*/
+		System.
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a Lowercase Letter:");

@@ -1,4 +1,4 @@
-package OOP;
+package practice;
 import java.util.ArrayList;
 
 public class Library {
@@ -8,12 +8,12 @@ public class Library {
         books.add(book);
     }
 
-    public void removeBook(Readable book) {
+    public void removeBook(java.lang.Readable book) {
         books.remove(book);
     }
 
     public void listBooks() {
-        for (Readable book : books) {
+        for (java.lang.Readable book : books) {
             System.out.println(book);
         }
     }
