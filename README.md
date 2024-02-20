@@ -5,30 +5,42 @@ It serves as a personal knowledge base and reference for various topics I've exp
 
 ## Topics Covered
 
+### Languages and Tools
+
 - Python
 - Go
 - Git
 - Shells and Terminals (Linux + Powershell)
 - JavaScript
--
+
+### Concepts
+
 - Object-Oriented Programming (OOP)
 - System Design and Architecture
 - Functional Programming
 
+### Algorithms and Data Structures
+
 - Algorithms
 - Advanced Algorithms
 - Data Structures
+
+### Connecting the Web and Persistence
 
 - HTTP
 - Webservers
 - Networking
 - SQL (Databases)
 
+### DevOps
+
 - AWS
 - Docker
 - Continuous Integration/Continuous Deployment (CI/CD)
 - Kubernetes
 - Terraform
+
+### Security and Integrity
 
 - Cryptography
 - Security
