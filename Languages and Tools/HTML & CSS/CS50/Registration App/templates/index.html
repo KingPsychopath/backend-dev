@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register for Owen's Sport Center
+{% endblock %}
+
+{% block body %}
+    <h1 class="title">Register for Owen's Sport Center</h1>
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Name" type="text">
+            <select name="sport">
+                <option disabled selection>Sport</option>
+                {% for sport in sports %}
+                    <option>{{ sport | capitalize }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="submit-btn" type="submit">Register</button>
+        </div>
+    </form>
+{% endblock %}

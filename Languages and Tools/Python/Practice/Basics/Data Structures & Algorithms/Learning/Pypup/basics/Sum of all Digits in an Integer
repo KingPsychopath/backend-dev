@@ -1,0 +1,17 @@
+# Return Type = int
+# Type of "x" = int
+
+def sum_all_digits(x):
+    sum = 0
+    while x > 0:
+        sum += x % 10
+        x //= 10
+
+    return sum
+
+print(sum_all_digits(1234))
+
+# x % 10 returns the last digit of x
+# x //= 10 removes the last digit of x
+# sum += x % 10 adds the last digit of x to the sum of all digits
+# sum_all_digits(1234) returns 10 because 1 + 2 + 3 + 4 = 10

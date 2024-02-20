@@ -1,0 +1,29 @@
+def dfs(v, parent, graph, depth):
+    max_depth = depth
+    max_node = v
+    for u in graph.get(v, []):
+        if u == parent:
+            continue
+        d, node = dfs(u, v, graph, depth + 1)
+        if d > max_depth:
+            max_depth = d
+            max_node = node
+    return max_depth, max_node
+
+def isSpecial(nodes, tree_from, tree_to):
+    graph = {}
+    for u, v in zip(tree_from, tree_to):
+        if u not in graph:
+            graph[u] = []
+        if v not in graph:
+            graph[v] = []
+        graph[u].append(v)
+        graph[v].append(u)
+    
+    _, node = dfs(1, -1, graph, 0)
+    _, node2 = dfs(node, -1, graph, 0)
+    
+    result = [0] * (nodes + 1)
+    result[node] = node
+    result[node2] = node2
+    return result[1:]

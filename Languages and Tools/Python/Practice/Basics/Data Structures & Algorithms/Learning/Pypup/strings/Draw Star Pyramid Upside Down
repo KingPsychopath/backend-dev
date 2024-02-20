@@ -1,0 +1,29 @@
+def print_reversed_star_pyramid(n):
+    for i in range(n, 0, -1):
+        print(' ' * (n - i) + '*' * (2 * i - 1))
+
+# Call the function with the number of rows you want
+print_reversed_star_pyramid(5)
+
+"""
+The provided Python code defines a function named print_reversed_star_pyramid that takes an integer n as an argument and prints a reversed star pyramid with n rows.
+
+The function works by using a for loop that iterates from n down to 1 (inclusive). The range of the loop is defined by range(n, 0, -1), which starts at n, ends at 0 (exclusive), and decrements by 1 in each iteration.
+
+Inside the loop, the function prints a string that represents a row of the pyramid. This string is composed of two parts:
+
+' ' * (n - i): This creates a string of spaces. The number of spaces is n - i, which decreases in each iteration. This aligns the stars to the right and creates the pyramid shape.
+
+'*' * (2 * i - 1): This creates a string of stars. The number of stars is 2 * i - 1, which is an odd number that decreases by 2 in each iteration. This creates the rows of the pyramid, with each row having one less pair of stars than the row below it.
+
+"""
+
+def stars_vii2(n):
+   for i in range(n, 0, -1):
+       for _ in range(n - i):
+           print(" ", end="")
+       for _ in range(2 * i - 1):
+           print("*", end="")
+       print()
+
+stars_vii2(5)

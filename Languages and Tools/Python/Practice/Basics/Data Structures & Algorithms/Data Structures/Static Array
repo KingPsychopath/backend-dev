@@ -1,0 +1,150 @@
+class StaticArray:
+    """
+    A class representing a static array data structure.
+
+    Attributes:
+    -----------
+    capacity : int
+        The maximum number of elements the array can hold.
+
+
+    Intuition:
+
+    capacity: Easily understandeable size of the list - how many elements can fit
+    
+    length : Points to current position in list, how many elements are occupying the list 
+        when this and capacity are equal the list is full
+
+    array : is just the default python array object
+    """
+
+    def __init__(self, capacity):
+        """
+        Initializes a new instance of the StaticArray class.
+
+        Parameters:
+        -----------
+        capacity : int
+            The maximum number of elements the array can hold.
+        array : list
+            The array that holds the elements.
+        length : int
+            The number of elements in the array.
+        """
+        self.array = [None] * capacity
+        self.capacity = capacity
+        self.length = 0
+
+    def insert_end(self, value):
+        """
+        Inserts a new element at the end of the array.
+
+        Parameters:
+        -----------
+        value : any
+            The value of the element to be inserted.
+        """
+        # Check if the list is full
+        if self.capacity > self.length:
+            # Insert the value at the end of the list
+            self.array[self.length] = value
+            # Increment the length
+            self.length += 1
+            return
+        print(f'List is full at capacity of ({self.capacity})')
+        
+
+    def remove_end(self):
+        """
+        Removes the last element from the array.
+
+        pop from length rather than capacity because list is not always full
+        use pop instead of remove as remove will remove the first instance of the value
+        """
+        # Check if the list is empty
+        if self.length > 0:
+            # Remove the last element
+            self.array.pop(self.length - 1)
+            # Decrement the length
+            self.length -= 1
+            return
+        print('List is empty')
+
+
+
+    def insert_middle(self, index, value):
+        """
+        Inserts a new element at the specified index of the array.
+
+        Parameters:
+        -----------
+        index : int
+            The index at which the element should be inserted.
+        value : any
+            The value of the element to be inserted.
+        """
+
+        # Check if the list is full
+        pass
+    
+    def remove_middle(self, index):
+        """
+        Removes the element at the specified index from the array.
+
+        Parameters:
+        -----------
+        index : int
+            The index of the element to be removed.
+        """
+        pass
+
+    def print_array(self):
+        """
+        Prints all the elements of the array.
+        """
+        for index, value in enumerate(self.array):
+            print(f'(Index: {index} Value: {value})', end=', ')
+
+
+    def getLength(self):
+        """
+        Returns the number of elements in the array.
+        """
+        return self.length
+    
+    def getCapacity(self):
+        """
+        Returns the capacity of the array.
+        """
+        return self.capacity
+
+
+# Testing
+
+# Create a static array and fill it with 5 elements
+StaticArray = StaticArray(5)
+StaticArray.insert_end(1)
+StaticArray.insert_end(2)
+StaticArray.insert_end(3)
+StaticArray.insert_end(4)
+StaticArray.insert_end(5)
+StaticArray.print_array()
+print(f'\n(Length: {StaticArray.length}, Capacity: {StaticArray.capacity})')
+print('1\n')
+
+# Should throw an error as list is full
+StaticArray.insert_end(6)
+StaticArray.print_array()
+print(f'\n(Length: {StaticArray.length}, Capacity: {StaticArray.capacity})')
+print('2\n')
+
+StaticArray.remove_end()
+StaticArray.print_array()
+print(f'\n(Length: {StaticArray.length}, Capacity: {StaticArray.capacity})')
+print('3\n')
+
+
+StaticArray.insert_middle(1, 7)
+StaticArray.print_array()
+print(f'\n(Length: {StaticArray.getLength()}, Capacity: {StaticArray.getCapacity()})')
+print('4\n')

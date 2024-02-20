@@ -1,0 +1,14 @@
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set mark-directories on
+set mark-symlinked-directories on
+set visible-stats on # show file types in tab completion
+
+# Enable history search - per command (up/down arrow)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Cycle through completions (left/right arrow) (tab)
+#"\e[C": menu-complete
+#"\e[D": menu-complete-backward
+"\C-i": menu-complete

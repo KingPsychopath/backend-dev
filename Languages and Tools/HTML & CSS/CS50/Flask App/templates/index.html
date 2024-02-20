@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flask - Name App
+{% endblock %}
+
+{% block body %}
+    <form method="post" action="/greet">
+        <input autocomplete="off" autofocus name="name" type="text" placeholder="What is your name?" required>
+        <input type="submit">
+    </form >
+{% endblock %}
+
+{% block footer %}
+    <p>Test, change!</p>
+{% endblock %}
+
+{"mode":"full","isactive":false}

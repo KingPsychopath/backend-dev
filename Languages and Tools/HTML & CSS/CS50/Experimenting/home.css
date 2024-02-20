@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: gold;
+}
+
+.center {
+    text-align: center;
+}
+
+.large {
+    font-size: large;
+}
+
+.medium {
+    font-size: medium;
+}
+
+.small {
+    font-size: small;
+}
+
+#title {
+    font-size: 50px;
+    color: black;
+}

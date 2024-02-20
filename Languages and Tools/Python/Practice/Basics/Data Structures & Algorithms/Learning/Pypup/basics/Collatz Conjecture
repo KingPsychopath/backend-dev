@@ -1,0 +1,36 @@
+# Return Type = int
+# Type of "x" = int
+def collatz(x):
+    steps = 0
+
+    while x != 1:
+        if x % 2 == 0:
+            x /= 2
+        else:
+            x *= 3
+            x += 1
+            print(x)
+
+        steps += 1
+    return steps
+
+print(collatz(3))
+# x % 2 == 0 checks if x is even
+# x /= 2 divides x by 2
+# x *= 3 multiplies x by 3
+# x += 1 adds 1 to x
+# collatz(3) returns 7 because it takes 7 steps to reach 1 from 3
+
+# Edge Case is 1
+# If x is 1, then the number of steps is 0
+
+# Edge Case is 0
+# If x is 0, then the number of steps is infinite
+
+# Edge Case is negative
+# If x is negative, then the number of steps is infinite hence this function can only use natural numbers
+
+# Edge Case is float
+# If x is float, then the number of steps is infinite hence this function can only use integers
+
+

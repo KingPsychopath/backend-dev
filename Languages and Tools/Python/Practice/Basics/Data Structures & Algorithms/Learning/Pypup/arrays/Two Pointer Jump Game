@@ -1,0 +1,79 @@
+# Return Type = boolean
+# Type of "nums" = list[int]
+# 2Pointer Solution - O(n) time, O(1) space - Using Greedy Algorithm
+
+# It is greedy because we are always trying to jump as far as possible, and we only stop when we cannot jump any further.
+
+# The weakness of this current method is that:
+    # If the greedy algorithm fails, it returns False without checking if there is another way to reach the last index.
+
+# Pros:
+    # It is fast because it only needs to iterate through the nums list once.
+    # It is space efficient because it does not use any extra space.
+def can_jump(nums):
+    # If there is only one element in the list, we can reach the last index
+    if len(nums) == 1:
+        return True
+
+    # Initialize left and right pointers
+    # use left pointer to check if right has moved
+
+    right = left = 0
+    goal = len(nums) - 1
+
+    # While left pointer is less than right pointer
+    while right < goal:
+        # Update previous to current left pointer
+        left = right
+
+        # Update right pointer to the next position we can jump to, using the value at the current left pointer as the maximum distance we can jump
+        right += nums[right]
+
+        # If we have reached the last index, return True
+        if right == goal:
+            return True
+
+        # If left pointer has not moved, we cannot reach the last index
+        if left == right:
+            return False
+
+'''
+Given a list of non-negative integers nums, you are initially positioned at the first index of the list. Each element in the list represents your maximum jump length at that position. Determine if you are able to reach the last index.
+
+Example 1:
+Input: nums = [2, 3, 1, 1, 4]
+Output: True
+Explanation: The possible jumps are 2 steps from index 0 to index 2, then 1 step to index 3, and finally 4 steps to reach the last index.
+
+Example 2:
+Input: nums = [3, 2, 1, 0, 4]
+Output: False
+
+'''
+
+# Better Solution
+# This function uses a greedy algorithm to solve the problem in O(n) time, where n is the length of the nums list.
+# Define a function called can_jump that takes in a list of integers called nums
+def can_jump(nums):
+   # Initialize a variable called max_reachable to 0
+   max_reachable = 0
+   # Loop through the indices of the nums list
+   for i in range(len(nums)):
+       # If the current index is greater than max_reachable, we cannot reach this index and return False
+       if i > max_reachable:
+           return False
+       # Update max_reachable to the maximum of its current value and the sum of the current index and its corresponding value in nums
+       max_reachable = max(max_reachable, i + nums[i])
+   # If we have not returned False in the loop, we can reach the last index and return True
+   return True
+
+# Most Optimal Solution - Iterate backwards 
+# Checking if you can reach the goal from the current index and shift the goal to the current index if you can
+def can_jump(nums):
+    goal = len(nums) - 1
+
+    for i in range(len(nums) - 1, -1, -1):
+        if i + nums[i] >= goal:
+            goal = i
+    # If we have reached the first index, we can reach the last index
+    return True if goal == 0 else False

@@ -1,0 +1,11 @@
+# Return Type = int
+# Type of "n" = int
+def sum_n_squared(n):
+    sum = 0
+    for i in range(1, n + 1):
+        sum += i**2
+
+    return sum
+    
+# range n+1 because range is exclusive and we want to include n in the sum
+# - also zero multiplied by itself is zero so we start from 1 to save a step
