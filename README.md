@@ -1,4 +1,4 @@
-# Boot.dev Home Study Repository
+# Home Study Repository
 
 This repository is dedicated to my back-end and DevOps development studies.
 It serves as a personal knowledge base and reference for various topics I've explored.
