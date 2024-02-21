@@ -31,11 +31,11 @@ app.get("/", (req, res) => {
       body: "This is the body of the fifth blog post. It's brief and succinct, just like the others.",
     },
   ];
-  res.render("index", { title: "Home Page", blogPosts });
+  res.render("layout", { title: "Home Page", body: "index", blogPosts });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Us" });
+  res.render("layout", { title: "About Us", body: "about" });
 });
 
 app.get("/about/", (req, res) => {
@@ -43,9 +43,9 @@ app.get("/about/", (req, res) => {
 });
 
 app.get("/create", (req, res) => {
-  res.render("create", { title: "Create a Post" });
+  res.render("layout", { title: "Create a Post", body: "create" });
 });
 
 app.use((req, res) => {
-  res.status(404).render("404", { title: "404: Not Found" });
+  res.status(404).render("layout", { title: "404: Not Found", body: "404" });
 });

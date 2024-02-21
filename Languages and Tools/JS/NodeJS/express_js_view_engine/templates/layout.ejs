@@ -2,14 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %> <!-- Include the head partial -->
-
   <body>
     <%- include('./partials/nav.ejs') %> <!-- Include the nav partial -->
-      <div class="content">
-        <%- body %>
-      </div>
+    <%- include(body) %> <!-- Include the body partial -->
+    <%- include('./partials/footer.ejs') %> <!-- Include the footer partial -->
   </body>
-
-  <%- include('./partials/footer.ejs') %> <!-- Include the footer partial -->
-
 </html>
