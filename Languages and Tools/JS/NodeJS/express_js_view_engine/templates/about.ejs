@@ -1,9 +1,8 @@
 <!-- index.ejs -->
-<% var title='Home Page' ; var body=` <div class="about content">
+<% var title=title; ; var body=` <div class="about content">
   <h1>Welcome to the About Page</h1>
   <p>This is the about page of our website.</p>
   </div>
   `;
   %>
   <%- include('layout', {title: title, body: body}) %>
-

@@ -56,3 +56,27 @@ app.use(expressLayouts);
 ```
 
 In this example, the `layout('layout')` statement tells EJS to use the `layout.ejs` file as the layout for this view. The `title` variable is defined and then used in the `layout.ejs` file. The rest of the `404.ejs` file is the specific content for this view.
+
+# Learned
+
+In EJS, `<%`, `<%=` and `<%-` have different uses:
+
+- `<% code %>`: This tag is used to embed any JavaScript code into the EJS template. The code inside these tags is executed, but nothing is output into the template, this is typically used for variable assignments or control flow.
+
+- <%= %> is used to output the result of JavaScript code into the template. The difference between <%= %> and <%- %> is that <%= %> escapes any HTML characters.
+
+- `<%- code %>`: This tag is also used to embed JavaScript code, but it outputs the result directly into the template. This is used when you want to output HTML or any other type of content that shouldn't be escaped.
+
+For example, if you have a variable `var htmlContent = "<p>Hello, world!</p>";`, you can output it into your template like this:
+
+```ejs
+<%- htmlContent %>
+```
+
+This will output the HTML as is, and you'll see "Hello, world!" in a paragraph in your rendered HTML. If you used `<%= htmlContent %>`, the HTML tags would be escaped and you'd see the literal string "<p>Hello, world!</p>" in your rendered HTML.
+
+```ejs
+<%= htmlContent %>
+```
+
+This will escape the HTML tags, and you'll see the literal string "<p>Hello, world!</p>" in your rendered HTML. If you used <%- message %>, the HTML tags would not be escaped and you'd see "Hello, world!" in a paragraph in your rendered HTML.

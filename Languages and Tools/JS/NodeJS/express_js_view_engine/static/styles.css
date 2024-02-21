@@ -31,6 +31,13 @@ nav ul li:hover {
   transition: 0.5s ease;
 }
 
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* other styles as needed */
+}
+
 /* Transitions: Add transitions to your hover effects to make them smoother. */
 .nav-headers a:hover {
   color: black;
@@ -41,6 +48,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  padding-top: 80px; /* Add a top padding to the body to avoid the fixed navbar */
   background-color: #f2f2f2;
 
   color: white;
@@ -52,8 +60,8 @@ body {
 }
 
 .blog-post {
-  margin: 20px 0;
-  padding: 20px;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 input[type="text"],

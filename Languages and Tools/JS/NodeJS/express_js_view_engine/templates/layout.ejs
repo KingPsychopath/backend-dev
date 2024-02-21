@@ -1,25 +1,15 @@
 <!-- layout.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+<%- include('./partials/head.ejs') %> <!-- Include the head partial -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%- title %></title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <%- include('./partials/nav.ejs') %> <!-- Include the nav partial -->
+      <div class="content">
+        <%- body %>
+      </div>
+  </body>
 
-<body>
-  <nav class="nav-bar">
-    <ul class="nav-headers">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/create">Blog</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <%- body %>
-  </div>
-</body>
+  <%- include('./partials/footer.ejs') %> <!-- Include the footer partial -->
 
 </html>

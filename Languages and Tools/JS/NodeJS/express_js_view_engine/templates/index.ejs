@@ -1,7 +1,29 @@
 <!-- index.ejs -->
-<% var title='Home Page' ; var body=` <div class="blog content">
+<% var title=title; ; var body=` <div class="blog content">
   <h1>Welcome to the Blog Page</h1>
+
+
   </div>
   `;
   %>
-  <%- include('layout', {title: title, body: body}) %>
+  <div class="blog content">
+    <%- include('layout', {title: title, body: body}) %>
+      <% if (blogPosts.length> 0) { %> <!-- If there are any blog posts... -->
+        <ul class="blog-posts"> <!-- Start a list -->
+          <% blogPosts.forEach((post)=> { %> <!-- For each blog post... -->
+            <li class="blog-post"> <!-- Create a list item -->
+              <h2>
+                <%= post.title %>
+              </h2> <!-- Display the post's title -->
+              <p>
+                <%= post.body %>
+              </p> <!-- Display the post's body -->
+            </li>
+            <% }) %> <!-- End of forEach loop -->
+        </ul> <!-- End of list -->
+        <% } else { %> <!-- End of if statement -->
+          <p>No blog posts yet!</p> <!-- If there are no blog posts, display this message -->
+
+
+          <% } %> <!-- End of else statement -->
+  </div>
