@@ -11,7 +11,7 @@ It serves as a personal knowledge base and reference for various topics I've exp
 - Go
 - Git
 - Shells and Terminals (Linux + Powershell)
-- JavaScript
+- JavaScript, HTML and CSS
 
 ### Concepts and Paradigms
 

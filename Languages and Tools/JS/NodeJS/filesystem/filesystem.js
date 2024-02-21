@@ -1,5 +1,5 @@
 // Import core module that we need to interact with the file system; this ability to interact with files isn't natively built into JS
-const fs = require('fs');
+const fs = require('fs'); // File System Module (Core Module NodeJS)
 
 // reading files (location of file, (function to fire after completed reading))
 fs.readFile('./res/text.txt', (err, data) => { // Async function - (meaning it doesn't block code being procedurally run)
@@ -21,9 +21,9 @@ fs.writeFile('./res/writeFile.txt', thingToWrite, (err, data) => {
     console.log('File was written!');
 })
 
-// creating & deleting directories 
+// creating & deleting directories
 const folderName = 'assets'
-if (!fs.existsSync(`./${folderName}`)) { 
+if (!fs.existsSync(`./${folderName}`)) {
     fs.mkdir(`./${folderName}`, (err) => {
         if (err) {
             console.log(err)
@@ -40,7 +40,7 @@ if (!fs.existsSync(`./${folderName}`)) {
     })
 }
 
- 
+
 // deleting files
 const fileName = 'writeFile.txt'
 if(fs.existsSync(`./res/${fileName}`)) {

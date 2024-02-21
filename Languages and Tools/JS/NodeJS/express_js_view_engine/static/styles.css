@@ -1,0 +1,79 @@
+/* Style the navigation bar */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the navigation links */
+nav ul li {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  transition: background-color 1s ease;
+}
+
+/* Change color on hover */
+nav ul li:hover {
+  background-color: #ddd;
+  transition: background-color 1s ease;
+}
+
+.nav-headers {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-headers a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease;
+}
+
+/* Transitions: Add transitions to your hover effects to make them smoother. */
+.nav-headers a:hover {
+  color: black;
+  transition: color 0.5s ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+
+  color: white;
+
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blog-post {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+  transition: background-color 0.7s ease;
+}

@@ -1,10 +1,10 @@
-const http = require("http");
-const fs = require("fs");
-const _ = require("lodash");
+const http = require("http"); // HTTP Module
+const fs = require("fs"); // File System Module
+const _ = require("lodash"); // Third Party Module for random number generation
 
 // Could store the instance of the server as a variable (useful for websockets)
 // createServer first argument, takes in a function that runs everytime a request is sent to the server.
-const server = http.createServer((request, response) => {
+const server = http.createServer((request, response) => { // request and response are objects
   // lodash - playing around with third-party dependencies
   const num = _.random(0, 20);
   console.log(num);
