@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.set("views", "templates"); // Default Views folder is /views; using templates instead
 
 app.use(express.static(__dirname + "/static"));
-app.listen(3000);
+app.listen(3005);
 
 app.get("/", (req, res) => {
   const blogPosts = [
